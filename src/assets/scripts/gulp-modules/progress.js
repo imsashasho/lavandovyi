@@ -85,7 +85,6 @@ buildProgressDataHandler();
 function buildProgressDataHandler() {
   if (document.documentElement.dataset.mode === 'local') return;
   const $container = document.querySelector('.progress__cards-wrapper');
-
   const state = {
     rendered: 2,
     portion: 2,
@@ -103,7 +102,7 @@ function buildProgressDataHandler() {
   };
   const getSingleCard = async id => {
     const sendData = new FormData();
-    sendData.append('action', 'construction');
+    sendData.append('action', 'constructions');
     sendData.append('id', id);
     return fetch('/wp-admin/admin-ajax.php', {
       method: 'POST',
@@ -118,32 +117,32 @@ function buildProgressDataHandler() {
     });
 
   function render(res) {
-    if (document.body.id === 'progress') {
-      $container.innerHTML = '';
-      const cards = state.data
-        .map((singleCardData, index) => {
-          if (index + 1 > state.rendered) return '';
-          return $progressCard(singleCardData);
-        })
-        .join('');
-      state.rendered += state.portion;
-      $container.insertAdjacentHTML('afterbegin', cards);
-      if (document.querySelectorAll('.progress-card').length >= state.data.length) {
-        state.loadMore.remove();
-      }
+    $container.innerHTML = '';
+    const cards = state.data
+      .map((singleCardData, index) => {
+        if (index + 1 > state.rendered) return '';
+        return $progressCard(singleCardData);
+      })
+      .join('');
+    state.rendered += state.portion;
+    $container.insertAdjacentHTML('afterbegin', cards);
+    if (document.querySelectorAll('.progress-card').length >= state.data.length) {
+      state.loadMore.remove();
     }
   }
 
-  function updatePopupInfo(data) {
+  function updatePopupInfo(data, id) {
     const popup = document.querySelector('.progress-pop-up');
-    // popup.style.opacity = 0;
+    popup.style.opacity = 0;
     const datetitle = document.querySelector('.pop-up__header');
     const text = document.querySelector('.pop-up__list');
     const sliderContainer = document.querySelector('.pop-up__slider');
     const swiper = sliderContainer.swiper;
     const slidesWrapper = sliderContainer.querySelector('.swiper-wrapper');
 
-    slidesWrapper.innerHTML = data.gallery
+    const gallery = data.find(item => item.id === Number(id));
+
+    slidesWrapper.innerHTML = gallery.data.gallery
       .map(img => {
         if (!img.match(/png|jpg|svg|jpeg/i)) {
           return `
@@ -161,30 +160,30 @@ function buildProgressDataHandler() {
       .join('');
     swiper.update();
     datetitle.innerHTML = `
-    <span class="pop-up__header-month">${data.date.split(' ')[1]}</span>
-    <span class="pop-up__header-year">${data.date.split(' ')[0]}</span>
+    <span class="pop-up__header-month">${gallery.data.nameMonth}</span>
+    <span class="pop-up__header-year">${gallery.data.year}</span>
     `;
-    text.innerHTML = data.text
+    text.innerHTML = gallery.data.text
       .map(
         part => `
     <li class="pop-up__element">${part}</li>
     `,
       )
       .join('');
-    // popup.style.opacity = 1;
+    popup.style.opacity = 1;
   }
 
   window.addEventListener('click', function(evt) {
     if (evt.target.closest('.progress__load-more-btn') === null) return;
     render();
   });
-
   window.addEventListener('click', function(evt) {
     if (evt.target.closest('[data-card-id]') === null) return;
     const id = evt.target.closest('[data-card-id]').dataset.cardId;
+
     getSingleCard(id)
       .then(res => res.json())
-      .then(updatePopupInfo);
+      .then(res => updatePopupInfo(res, id));
   });
 
   function $progressCard(data) {

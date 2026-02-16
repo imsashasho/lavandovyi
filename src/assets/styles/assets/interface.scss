@@ -1277,10 +1277,10 @@
       margin-top: 10px;
       @include baseFlexStyle();
 
-      &::before {
-        content: '/';
-        margin-right: 23px;
-      }
+      // &::before {
+      //   content: '/';
+      //   margin-right: 23px;
+      // }
     }
 
     &__slide-num {
