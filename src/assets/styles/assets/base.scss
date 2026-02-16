@@ -75,11 +75,11 @@ body {
     display: none;
   }
 }
-.page__inner {
-  @include to(576px){
-    overflow-x: hidden
-  }
-}
+// .page__inner {
+//   @include to(576px){
+//     overflow-x: hidden
+//   }
+// }
 a {
   @include resetLinkStyles;
 }
@@ -95,7 +95,6 @@ img {
 // ::-webkit-scrollbar {
 //   display: none;
 // }
-
 
 .loader-wrap {
   position: fixed;
@@ -125,12 +124,12 @@ img {
 }
 
 .desktop-hide {
-  @include from(576px){
+  @include from(576px) {
     display: none;
   }
 }
 .hide-on-mobile {
-  @include to(575px){
+  @include to(575px) {
     display: none !important;
   }
 }

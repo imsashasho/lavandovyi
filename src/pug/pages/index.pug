@@ -18,65 +18,106 @@ block scripts
   script(defer src='./assets/scripts/libs.js')
   script(defer src='./assets/scripts/header.js')
   script(defer src='./assets/scripts/homepage.bundle.js')
+  script(defer src='./assets/scripts/progress.js')
 block content
   .front-screen-modal(data-front-screen-popup)
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="front-screen-modal-close" data-front-screen-popup-close>
       <circle cx="12" cy="12" r="12" fill="#F9F8FC"/>
       <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29291 7.29289C7.68343 6.90237 8.3166 6.90237 8.70712 7.29289L12 10.5858L15.2929 7.29289C15.6834 6.90237 16.3166 6.90237 16.7071 7.29289C17.0976 7.68342 17.0976 8.31658 16.7071 8.70711L13.4142 12L16.7071 15.2929C17.0976 15.6834 17.0976 16.3166 16.7071 16.7071C16.3166 17.0976 15.6834 17.0976 15.2929 16.7071L12 13.4142L8.70712 16.7071C8.3166 17.0976 7.68343 17.0976 7.29291 16.7071C6.90238 16.3166 6.90238 15.6834 7.29291 15.2929L10.5858 12L7.29291 8.70711C6.90238 8.31658 6.90238 7.68342 7.29291 7.29289Z" fill="#4A3A5E"/>
-      </svg>
+    </svg>
 
     .front-screen-modal-backdrop
     .front-screen-modal-content
   main.main.main-home 
     section.start-section
       .first-column
-        p.first-column__header.headers ЖК LAVANDA PARK — Спокій та затишок у дрібницях
-        p.first-column__text.section-text Всім з дитинства знайоме почуття, коли хочеться усамітнитися, створити свій милий серцю куточок
-        a.first-column__btn-link(href="#") обрати квартиру
-      .second-column 
-        //- video( data-front-screen-popup-call poster="./assets/images/Header/logo.svg" src='https://lavanda-park.vn.ua/wp-content/themes/lavanda/assets/front-video.mp4' muted autoplay looped playsinline).second-column__img
-        //- img(src="./assets/images/home/start-sec-1.jpg", alt="Interiere").second-column__img
-        <div class="second-column__img__wrapper">
-          <a href="https://maps.app.goo.gl/ovAy8RZTV8FscHuy5" target="_blank" rel="noreferrer noopener nofollow" class="section-1__location-link">
-          <svg width="16" height="16" fill="#fff" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 0c-5.523 0-10 4.477-10 10 0 10 10 22 10 22s10-12 10-22c0-5.523-4.477-10-10-10zM16 16c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z"></path>
-          </svg>
-            <span>м. Вінниця, вул. Ватутіна 16 Б</span>
-          </a>
-          <div class="second-column__img-wrap"> 
-              <video class="second-column__img" src="https://lavanda-park.vn.ua/wp-content/themes/lavanda/assets/front-video.mp4" muted="" autoplay="" loop="" playsinline="" style="clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); object-fit: cover;"></video>
-              <button class="section-1__video-button" id="toggle-sound-button" style="position: absolute;">
-                <svg class="section-1__video-button-off" enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <line fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" x1="32" x2="42" y1="20" y2="30"></line>
-                  <line fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" x1="42" x2="32" y1="20" y2="30"></line>
-                  <rect fill="none" height="50" width="50"></rect>
-                  <rect fill="none" height="50" width="50"></rect>
-                  <path d="M10,33H3  c-1.103,0-2-0.898-2-2V19c0-1.102,0.897-2,2-2h7" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.08"></path>
-                  <path d="M9.604,32.43  C9.256,32.129,9,31.391,9,30.754V19.247c0-0.637,0.256-1.388,0.604-1.689L22.274,4.926C23.905,3.27,26,3.898,26,6.327v36.988  c0,2.614-1.896,3.604-3.785,1.686L9.604,32.43z" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9797"></path>
-                </svg>
-                <svg class="section-1__video-button-on" enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <rect fill="none" height="50" width="50"></rect>
-                  <path d="M10,33H3  c-1.103,0-2-0.898-2-2V19c0-1.102,0.897-2,2-2h7" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.08"></path>
-                  <path d="M9.604,32.43  C9.256,32.129,9,31.391,9,30.754V19.247c0-0.637,0.256-1.388,0.604-1.689L22.274,4.926C23.905,3.27,26,3.898,26,6.327v36.988  c0,2.614-1.896,3.604-3.785,1.686L9.604,32.43z" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9797"></path>
-                  <path d="M30.688,19.417C33.167,20.064,35,22.32,35,25s-1.833,4.936-4.312,5.584" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path>
-                  <path d="M34.92,13.142C39.136,15.417,42,19.873,42,25c0,5.111-2.85,9.557-7.045,11.835" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2">
-                  </path>
-                  <path d="M38.498,7.82c6.276,3.167,10.579,9.668,10.579,17.18c0,7.512-4.303,14.014-10.579,17.18" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2">
-                  </path>
-                </svg>
-              </button>
-          </div> 
-        </div>
-        .second-column__link-wrapper
-          a.second-column__link(href="#" data-text="Facebook") Facebook
-          a.second-column__link(href="#" data-text="instagram") instagram
-      .third-column 
-        p.third-column__text.section-text З віком запитів стає набагато більше: вид з вікна, привітні сусіди, безпечні майданчики для дітей, супермаркети на першому поверсі, хімчистки, ресторани, пекарні
-        img(src="./assets/images/home/start-sec-2.jpg", alt="Interiere").third-column__img
-      <svg data-scroll-down class="start-section__scroll-down" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="35" cy="35" r="34" stroke="#dfdce4"/>
-        <path d="M29 34.0002L35 40.0002L41 34.0002" stroke="#4a3a5e" stroke-width="2"/>
+        .first-column__social 
+          div 
+            a(href="https://www.facebook.com/lavandapark" target="_blank")
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.8092 3.985H18V0.169C17.622 0.117 16.3221 0 14.8083 0C11.6495 0 9.48571 1.987 9.48571 5.639V9H6V13.266H9.48571V24H13.7594V13.267H17.1041L17.635 9.001H13.7584V6.062C13.7594 4.829 14.0913 3.985 15.8092 3.985Z" fill="#4A3A5E"/>
+              </svg>
+          div
+            a(href="https://www.instagram.com/lavandapark.vn/" target="_blank") 
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.0068 3.00586C14.351 3.00586 14.6519 3.01631 15.584 3.06055C16.536 3.10257 17.2024 3.25764 17.792 3.48535C18.4129 3.71926 18.9787 4.08719 19.4463 4.56055L19.1875 4.8252L19.4512 4.56543L19.623 4.74316C20.0172 5.17361 20.3225 5.67373 20.5303 6.22266C20.7584 6.80981 20.9141 7.47983 20.9561 8.43164C20.9969 9.36089 21 9.66192 21 12.0039C21 14.3477 20.99 14.6474 20.9492 15.5752C20.9072 16.5284 20.7514 17.1961 20.5234 17.7861C20.0375 19.0423 19.0437 20.0356 17.7871 20.5215C17.1997 20.7499 16.5288 20.9053 15.5762 20.9473C14.6481 20.9882 14.3482 20.998 12.0039 20.998C9.65954 20.998 9.35963 20.9882 8.43164 20.9473C7.47921 20.9053 6.81239 20.7502 6.22266 20.5225C5.67846 20.3175 5.17655 20.0089 4.74609 19.6172L4.56738 19.4463L4.82715 19.1826L4.56348 19.4414C4.09025 18.9743 3.72188 18.4126 3.48438 17.7852C3.25622 17.198 3.10057 16.5271 3.05859 15.5752C3.01784 14.6475 3.00781 14.3476 3.00781 12.0039C3.00781 9.66028 3.01826 9.35952 3.0625 8.42773C3.10454 7.47574 3.25954 6.80931 3.4873 6.21973C3.69244 5.67577 4.00083 5.1745 4.39258 4.74414L4.5625 4.56641L4.82715 4.8252L4.56738 4.56152C5.03586 4.08356 5.59889 3.71846 6.22559 3.48145C6.81253 3.25358 7.48281 3.0986 8.43457 3.05664C9.36284 3.01587 9.66247 3.00586 12.0068 3.00586ZM12.0039 7.74023C9.65143 7.74023 7.74232 9.64841 7.74219 12.001C7.74219 14.3537 9.65135 16.2627 12.0039 16.2627C14.3564 16.2625 16.2646 14.3535 16.2646 12.001C16.2645 9.64852 14.3564 7.74042 12.0039 7.74023ZM17.21 4.89844C16.1643 4.89858 15.3164 5.74693 15.3164 6.79297C15.3166 7.83862 16.1644 8.68638 17.21 8.68652C18.2558 8.68652 19.1043 7.83875 19.1045 6.79297C19.1045 5.7468 18.2559 4.89844 17.21 4.89844Z" fill="#4A3A5E"/>
+              </svg>
+          div 
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.0039 3.75C12.0556 3.75022 16.4428 3.77905 19.3486 3.98828L19.3867 3.99219C19.4194 3.9965 19.4562 4.0004 19.4961 4.00488C19.9786 4.05923 20.9821 4.17338 21.8672 5.10645C22.6327 5.89979 22.8183 7.45944 22.8369 7.63477L22.8379 7.64453C22.8447 7.72067 22.9998 9.45605 23 11.1982V12.8281C23 14.5711 22.8446 16.3072 22.8379 16.3818L22.8359 16.4043C22.8144 16.5758 22.6031 18.1017 21.874 18.8867C20.9989 19.8402 20.0115 19.9443 19.5371 19.9941C19.4918 19.9988 19.4498 20.003 19.4131 20.0078L19.375 20.0117C16.4666 20.2211 12.0742 20.2498 12.0303 20.25H12.0166C11.7871 20.2467 6.52812 20.1688 4.84961 20.0107L4.79883 20.0039C4.74629 19.9948 4.66856 19.9857 4.5791 19.9756C4.01306 19.9114 2.96089 19.7922 2.12891 18.8906C1.36742 18.0977 1.182 16.5684 1.16309 16.3936L1.16211 16.3818C1.15524 16.3051 1 14.57 1 12.8281V11.1982C1 9.45594 1.15531 7.7203 1.16211 7.64453L1.16406 7.62207C1.18571 7.45056 1.3968 5.9245 2.12598 5.13965C3.01354 4.17284 4.00638 4.0594 4.4834 4.00488C4.52064 4.00058 4.55484 3.99632 4.58594 3.99219L4.625 3.98828C7.55961 3.77887 11.9521 3.75017 11.9961 3.75H12.0039ZM10.3916 8.71191C10.0973 8.56484 9.74941 8.57044 9.46094 8.72656C9.17225 8.8829 9 9.15928 9 9.46582V14.54C9.00018 14.8449 9.17147 15.1199 9.45801 15.2764C9.60775 15.3581 9.77407 15.3994 9.94043 15.3994C10.0927 15.3993 10.2453 15.365 10.3857 15.2959L15.5049 12.7812C15.8088 12.6319 15.9986 12.3428 16 12.0273C16.0011 11.7121 15.8136 11.4219 15.5107 11.2705L10.3916 8.71191Z" fill="#4A3A5E"/>
+            </svg>
+          div 
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.5094 5.13274C19.3536 5.04902 19.202 4.95725 19.0551 4.85776C18.6279 4.564 18.2361 4.21786 17.8884 3.82681C17.0183 2.79136 16.6933 1.74091 16.5736 1.00545H16.5784C16.4784 0.39498 16.5198 0 16.526 0H12.563V15.9382C12.563 16.1522 12.563 16.3637 12.5543 16.5727C12.5543 16.5987 12.5519 16.6227 12.5505 16.6507C12.5505 16.6622 12.5505 16.6742 12.5481 16.6862C12.5481 16.6892 12.5481 16.6922 12.5481 16.6952C12.5063 17.267 12.33 17.8194 12.0348 18.3038C11.7396 18.7882 11.3344 19.1897 10.8549 19.473C10.3553 19.7687 9.7901 19.9238 9.21521 19.923C7.36875 19.923 5.87227 18.3571 5.87227 16.4232C5.87227 14.4893 7.36875 12.9234 9.21521 12.9234C9.56473 12.923 9.9121 12.9802 10.2444 13.0928L10.2492 8.89606C9.24038 8.76052 8.21546 8.84391 7.23914 9.14096C6.26282 9.43802 5.35628 9.94229 4.57672 10.622C3.89365 11.2392 3.31938 11.9758 2.87977 12.7984C2.71248 13.0983 2.0813 14.3038 2.00486 16.2602C1.95679 17.3706 2.27743 18.5211 2.4303 18.9966V19.0066C2.52644 19.2865 2.899 20.242 3.50615 21.0474C3.99574 21.6936 4.57417 22.2611 5.22281 22.7319V22.7219L5.23243 22.7319C7.15099 24.0878 9.27818 23.9988 9.27818 23.9988C9.64641 23.9833 10.8799 23.9988 12.2808 23.3083C13.8345 22.5429 14.719 21.4024 14.719 21.4024C15.2841 20.721 15.7334 19.9444 16.0477 19.106C16.4063 18.1256 16.526 16.9497 16.526 16.4797V8.0241C16.5741 8.0541 17.2144 8.49458 17.2144 8.49458C17.2144 8.49458 18.1369 9.10955 19.5762 9.51003C20.6088 9.79501 22 9.85501 22 9.85501V5.76321C21.5125 5.81821 20.5227 5.65822 19.5094 5.13274Z" fill="#4A3A5E"/>
+            </svg>
+        p.first-column__header.headers LAVANDA PARK - ВАШ СПОКІЙ ТА ЗАТИШОК
+        p.first-column__text.section-text Це місце, де завжди на Вас чекають та піклуються
+        a(class="first-column__btn-link js-btn-call js-mobile-popup-call") Залишити заявку
+        <svg data-scroll-down class="start-section__scroll-down" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="35" cy="35" r="34" stroke="#dfdce4"/>
+          <path d="M29 34.0002L35 40.0002L41 34.0002" stroke="#4a3a5e" stroke-width="2"/>
         </svg>
+      .second-column 
+          <div class="second-column__video_wrapper"> 
+              <video class="second-column__img" src="https://lavanda-park.vn.ua/wp-content/themes/lavanda/assets/front-video.mp4" muted="" autoplay="" loop="" playsinline="" style="clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); object-fit: cover;"></video>
+              //- <button class="section-1__video-button" id="toggle-sound-button" style="position: absolute;">
+              //-   <svg class="section-1__video-button-off" enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              //-     <line fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" x1="32" x2="42" y1="20" y2="30"></line>
+              //-     <line fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" x1="42" x2="32" y1="20" y2="30"></line>
+              //-     <rect fill="none" height="50" width="50"></rect>
+              //-     <rect fill="none" height="50" width="50"></rect>
+              //-     <path d="M10,33H3  c-1.103,0-2-0.898-2-2V19c0-1.102,0.897-2,2-2h7" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.08"></path>
+              //-     <path d="M9.604,32.43  C9.256,32.129,9,31.391,9,30.754V19.247c0-0.637,0.256-1.388,0.604-1.689L22.274,4.926C23.905,3.27,26,3.898,26,6.327v36.988  c0,2.614-1.896,3.604-3.785,1.686L9.604,32.43z" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9797"></path>
+              //-   </svg>
+              //-   <svg class="section-1__video-button-on" enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              //-     <rect fill="none" height="50" width="50"></rect>
+              //-     <path d="M10,33H3  c-1.103,0-2-0.898-2-2V19c0-1.102,0.897-2,2-2h7" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.08"></path>
+              //-     <path d="M9.604,32.43  C9.256,32.129,9,31.391,9,30.754V19.247c0-0.637,0.256-1.388,0.604-1.689L22.274,4.926C23.905,3.27,26,3.898,26,6.327v36.988  c0,2.614-1.896,3.604-3.785,1.686L9.604,32.43z" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9797"></path>
+              //-     <path d="M30.688,19.417C33.167,20.064,35,22.32,35,25s-1.833,4.936-4.312,5.584" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path>
+              //-     <path d="M34.92,13.142C39.136,15.417,42,19.873,42,25c0,5.111-2.85,9.557-7.045,11.835" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2">
+              //-     </path>
+              //-     <path d="M38.498,7.82c6.276,3.167,10.579,9.668,10.579,17.18c0,7.512-4.303,14.014-10.579,17.18" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2">
+              //-     </path>
+              //-   </svg>
+              //- </button>
+          </div> 
+          .second-column__slide 
+            a.second-column__slide_top(href="https://www.google.com/maps/place/%D0%96%D0%9A+Lavanda+Park/@49.2422194,28.5337413,18.5z/data=!4m6!3m5!1s0x472d5ba0ecb0fbff:0xd59093254603bb70!8m2!3d49.242202!4d28.5338317!16s%2Fg%2F11vbzmld3t?entry=tts" target="_blank")
+              img(src="../../assets/images/home/location.png" alt="map")
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0C15.7121 0 18.9999 2.49051 19 7.24512C19 8.24124 18.5053 9.69787 18.2578 10.3018L12 24L5.74219 10.3018C5.49469 9.69787 5 8.24124 5 7.24512C5.00008 2.49053 8.28797 2.09019e-05 12 0ZM12 4C10.3431 4 9 5.34315 9 7C9 8.65685 10.3431 10 12 10C13.6569 10 15 8.65685 15 7C15 5.34315 13.6569 4 12 4Z" fill="#4A3A5E"/>
+              </svg>
+              span м. Вінниця, вул. Левка Лукʼяненка 16 Б  
+            .second-column__slide_wrapper 
+              .swiper.second-column__swiper
+                .swiper-wrapper
+                  .swiper-slide: img(src="../../assets/images/home/top_section_slide.jpg" alt="house")
+                  .swiper-slide: img(src="../../assets/images/home/top_section_slide_2.jpg" alt="house")
+            .second-column__slide_pagination 
+              .progress-container
+                .progress-bar#swiperProgressBar
+      .third-column
+        div
+          a.third-column__top(href="https://www.google.com/maps/place/%D0%96%D0%9A+Lavanda+Park/@49.2422194,28.5337413,18.5z/data=!4m6!3m5!1s0x472d5ba0ecb0fbff:0xd59093254603bb70!8m2!3d49.242202!4d28.5338317!16s%2Fg%2F11vbzmld3t?entry=tts" target="_blank")
+            img(src="../../assets/images/home/location.png" alt="map")
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0C15.7121 0 18.9999 2.49051 19 7.24512C19 8.24124 18.5053 9.69787 18.2578 10.3018L12 24L5.74219 10.3018C5.49469 9.69787 5 8.24124 5 7.24512C5.00008 2.49053 8.28797 2.09019e-05 12 0ZM12 4C10.3431 4 9 5.34315 9 7C9 8.65685 10.3431 10 12 10C13.6569 10 15 8.65685 15 7C15 5.34315 13.6569 4 12 4Z" fill="#4A3A5E"/>
+            </svg>
+            span м. Вінниця, вул. Левка Лукʼяненка 16 Б 
+          .third-column__wrapper
+            .scroll-container
+              .scroll-content
+                .swiper-slide.stocks-section-slider__item
+                  +card('./assets/images/home/stocks/card-img.png', '23/09/2021', '1Встигніть здійснити бажання про власне житло! Продаж квартир у жк lavanda park відкрито!')
+                .swiper-slide.stocks-section-slider__item
+                  +card('./assets/images/home/stocks/card-img.png', '23/09/2021', '2Встигніть здійснити бажання про власне житло! Продаж квартир у жк lavanda park відкрито!')
+                .swiper-slide.stocks-section-slider__item
+                  +card('./assets/images/home/stocks/card-img.png', '23/09/2021', '3Встигніть здійснити бажання про власне житло! Продаж квартир у жк lavanda park відкрито!')
+                .swiper-slide.stocks-section-slider__item
+                  +card('./assets/images/home/stocks/card-img.png', '23/09/2021', '4Встигніть здійснити бажання про власне житло! Продаж квартир у жк lavanda park відкрито!')
+        .progress-bar-container
+          .progress-bar.third-column__progress-bar
+        a(class="third-column__btn-link" href="https://lavanda-park.vn.ua/news/" target="_blank") ДИВИТИСЯ БІЛЬШЕ НОВИН
     section.lavanda-park 
       .left-side
         p.left-side__header lavanda park — 
@@ -99,112 +140,382 @@ block content
         .right-side__cell
           .right-side__header(data-count="10") 10
           .right-side__subheader поверхів
-    section.advantages-section 
-      .first-column
-        .first-column__text-wrapper
-          .advantages-text-slider
-            .advantages-text-slider__wrp.swiper-wrapper
-              .swiper-slide.advantages-text-slider__item
-                p.first-column__header.headers дворівневий підземний паркінг
-                p.first-column__text.section-text З віком запитів стає набагато більше: вид з вікна,  привітні сусіди, безпечні майданчики для дітей, супермаркети на першому поверсі,   хімчистки, ресторани, пекарні, кафе в будинку, місце для машини.
-              .swiper-slide.advantages-text-slider__item
-                p.first-column__header.headers дворівневий підземний паркінг
-                p.first-column__text.section-text З віком запитів стає набагато більше: вид з вікна,  привітні сусіди, безпечні майданчики для дітей, супермаркети на першому поверсі,   хімчистки, ресторани, пекарні, кафе в будинку, місце для машини.
-              .swiper-slide.advantages-text-slider__item
-                p.first-column__header.headers дворівневий підземний паркінг
-                p.first-column__text.section-text З віком запитів стає набагато більше: вид з вікна,  привітні сусіди, безпечні майданчики для дітей, супермаркети на першому поверсі,   хімчистки, ресторани, пекарні, кафе в будинку, місце для машини.
-        .first-column__btn-wrapper 
-          button.first-column__btn.left-btn.advantages-slider-prev
-            img.first-column__btn-img(src="./assets/images/home/left-arrow.svg")
-          span.first-column__slide-num 
-            span.first-column__curr-slide 01
-            span.first-column__divider /
-            span.first-column__all-slides 04
-          button.first-column__btn.right-btn.advantages-slider-next
-           img.first-column__btn-img(src="./assets/images/home/right-arrow.svg")
-      .second-column 
-        .advantages-slider
-          .advantages-slider__wrp.swiper-wrapper
-            .swiper-slide.advantages-slider__item
-              img(src="./assets/images/home/parking.jpg", alt="Parking").second-column__img
-            .swiper-slide.advantages-slider__item
-              img(src="./assets/images/home/parking.jpg", alt="Parking").second-column__img
-            .swiper-slide.advantages-slider__item
-              img(src="./assets/images/home/parking.jpg", alt="Parking").second-column__img
-        .second-column__nav-wrapper 
-          .second-column__nav-line
-      .third-column
-        .third-column__text-wrapper
-          p.third-column__header.headers дворівневий підземний паркінг
-          p.third-column__text.section-text З віком запитів стає набагато більше: вид з вікна,  привітні сусіди, безпечні майданчики для дітей, супермаркети на першому поверсі,   хімчистки, ресторани, пекарні, кафе в будинку, місце для машини.
-        img(src="./assets/images/home/developer.jpg", alt="Developer").third-column__img
-    section.slider-section 
-      p.slider-section__header.headers справжній простір сили, енергії та процвітання для Вас та Вашої родини!
-      .slider-section__slider-wrapper.js-slider-wrapper
-        .slider-section__controller.js-slider-controller
-          .swiper-pagination.slider-section__controller-text
-          //- span.slider-section__controller-text 
-          //-   span.slider-section__curr-slide 01
-          //-   span.slider-section__divider /
-          //-   span.slider-section__all-slides 13
-          img.slider-section__controller-arrow(src="./assets/images/home/slider-section/arrow.svg" alt="Arrow")
-        //- .slider-section__slider-wrapper.js-slider-wrapper 
-          //- .slider-section__controller.js-slider-controller
-            span.slider-section__controller-text 
-              span.slider-section__curr-slide 01
-              span.slider-section__divider /
-              span.slider-section__all-slides 13
-            img.slider-section__controller-arrow(src="./assets/images/home/slider-section/arrow.svg" alt="Arrow")
-        .swiper
-          .swiper-wrapper.slider-section__slider.js-slider
-            img.swiper-slide.slider-section__slide(src="./assets/images/home/slider-section/1.jpg", alt="Slide")
-            img.swiper-slide.slider-section__slide(src="./assets/images/home/slider-section/2.jpg", alt="Slide")
-            img.swiper-slide.slider-section__slide(src="./assets/images/home/slider-section/3.jpg", alt="Slide")
-      .slider-section__btn-wrapper 
-        button.slider-section__btn.left-btn.slider-section-prev
-          img.slider-section__btn-img(src="./assets/images/home/left-arrow.svg")
-        span.slider-section__slide-num 
-          span.slider-section__curr-slide 01
-          span.slider-section__divider /
-          span.slider-section__all-slides 04
-        button.slider-section__btn.right-btn.slider-section-next
-          img.slider-section__btn-img(src="./assets/images/home/right-arrow.svg")  
-    section.calm-place 
-      .calm-place__content-wrapper
-        .calm-place__img.img-baby
-          img(src="./assets/images/home/calm-place/baby.jpg", alt="Baby")
-        .calm-place__img.img-flower
-          img.calm-place__img.img-flower(src="./assets/images/home/calm-place/flower.jpg", alt="Flower")
-        .calm-place__img.img-brushes
-          img(src="./assets/images/home/calm-place/brushes.jpg", alt="Brushes")
-        .calm-place__img.img-book
-          img(src="./assets/images/home/calm-place/book.jpg", alt="Book")
-        .calm-place__img.img-family
-          img(src="./assets/images/home/calm-place/family.jpg", alt="Family")
-        .calm-place__img.img-cup
-          img(src="./assets/images/home/calm-place/cup.jpg", alt="Cup")
-        p.calm-place__header місце вашого спокою
-        a.calm-place__link(href="#") обрати квартиру
-    section.stocks-section 
-      .stocks-section_abs-wrapper
-        .stocks-section_abs
-          .stocks-section_abs-inn#scrollingText
-            - let count = 0;
-            while count < 10
-              p.stocks-section__text-wrapper.js-stocks-text-wrapper 
-                span.stocks-section__text.js-stocks-text акції#[span.stocks-section__ampersand &]новини#[span.stocks-section__ampersand &]
-              - count++;
-      .stocks-section-slider
-          .stocks-section-slider__wrp
+    section.gallery.block-anim
+      .gallery__wrapper 
+        .gallery__title.headers Галерея
+        .gallery__text.section-text Справжній простір сили, енергії та процвітання для Вас та Вашої родини!
+        .gallery__tabs 
+          button.gallery__btn.button-anim.active(id="gallery-photos") Візуалізації
+          button.gallery__btn.button-anim(id="gallery-views") Краєвиди
+          button.gallery__btn.button-anim(id="gallery-videos") Відео
+        .gallery__display 
+          .gallery__display_wrapper.gallery__photos.active(data-for="gallery-photos")
+            .swiper.gallery__photos_swiper
+                .swiper-wrapper
+                  .swiper-slide: img(src="../../assets/images/home/slider-section/1.jpg" alt="house")
+                  .swiper-slide: img(src="../../assets/images/home/slider-section/1.jpg" alt="house")
+                  .swiper-slide: img(src="../../assets/images/home/slider-section/1.jpg" alt="house")
+                  .swiper-slide: img(src="../../assets/images/home/slider-section/1.jpg" alt="house")
+                  .swiper-slide: img(src="../../assets/images/home/slider-section/1.jpg" alt="house")
+                  .swiper-slide: img(src="../../assets/images/home/slider-section/1.jpg" alt="house")
+                  .swiper-slide: img(src="../../assets/images/home/slider-section/1.jpg" alt="house")
+                  .swiper-slide: img(src="../../assets/images/home/slider-section/1.jpg" alt="house")
+                
+                .gallery_nav
+                  .photos_swiper-button-prev.gallery__nav_btn.gallery__nav_btn_prev
+                    <svg data-scroll-down width="70" height="70" viewBox="0 0 70 70" fill="#4a3a5e" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="35" cy="35" r="34" stroke="#4a3a5e"/>
+                      <path d="M29 34.0002L35 40.0002L41 34.0002" stroke="#ffff" stroke-width="2"/>
+                    </svg>
+                  .photos_swiper-button-next.gallery__nav_btn.gallery__nav_btn_next
+                    <svg data-scroll-down width="70" height="70" viewBox="0 0 70 70" fill="#4a3a5e" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="35" cy="35" r="34" stroke="#4a3a5e"/>
+                      <path d="M29 34.0002L35 40.0002L41 34.0002" stroke="#ffff" stroke-width="2"/>
+                    </svg>
+          .gallery__display_wrapper.gallery__views(data-for="gallery-views")
+            .swiper.gallery__views_swiper
+                .swiper-wrapper
+                  .swiper-slide: img(src="../../assets/images/home/slider-section/view_1.jpg" alt="house")
+                  .swiper-slide: img(src="../../assets/images/home/slider-section/view_2.jpg" alt="house")
+                
+                .gallery_nav
+                  .view_swiper-button-prev.gallery__nav_btn.gallery__nav_btn_prev
+                    <svg data-scroll-down width="70" height="70" viewBox="0 0 70 70" fill="#4a3a5e" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="35" cy="35" r="34" stroke="#4a3a5e"/>
+                      <path d="M29 34.0002L35 40.0002L41 34.0002" stroke="#ffff" stroke-width="2"/>
+                    </svg>
+                  .view_swiper-button-next.gallery__nav_btn.gallery__nav_btn_next
+                    <svg data-scroll-down width="70" height="70" viewBox="0 0 70 70" fill="#4a3a5e" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="35" cy="35" r="34" stroke="#4a3a5e"/>
+                      <path d="M29 34.0002L35 40.0002L41 34.0002" stroke="#ffff" stroke-width="2"/>
+                    </svg>
+          .gallery__display_wrapper.gallery__videos(data-for="gallery-videos")
+            .swiper.gallery__videos_swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    .video-container
+                      video.video-player#video1(width="640" height="360" poster="../../assets/images/home/top_section_slide.jpg" preload="none")
+                        source(src="https://lavanda-park.vn.ua/wp-content/themes/lavanda/assets/front-video.mp4" type="video/mp4")
+                        | Ваш браузер не поддерживает видео.
+                      .controls
+                        button.play-button(type="button") <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg>
+                        button.pause-button(type="button") <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Zm400-80h80v-400h-80v400Zm-320 0h80v-400h-80v400Zm0-400v400-400Zm320 0v400-400Z"/></svg>
+
+                  .swiper-slide
+                    .video-container
+                      video.video-player#video2(width="640" height="360" poster="../../assets/images/home/top_section_slide.jpg" preload="none")
+                        source(src="https://lavanda-park.vn.ua/wp-content/themes/lavanda/assets/front-video.mp4" type="video/mp4")
+                        | Ваш браузер не поддерживает видео.
+                      .controls
+                        button.play-button(type="button") <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg>
+                        button.pause-button(type="button") <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Zm400-80h80v-400h-80v400Zm-320 0h80v-400h-80v400Zm0-400v400-400Zm320 0v400-400Z"/></svg>
+                
+                .gallery_nav
+                  .video_swiper-button-prev.gallery__nav_btn.gallery__nav_btn_prev
+                    <svg data-scroll-down width="70" height="70" viewBox="0 0 70 70" fill="#4a3a5e" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="35" cy="35" r="34" stroke="#4a3a5e"/>
+                      <path d="M29 34.0002L35 40.0002L41 34.0002" stroke="#ffff" stroke-width="2"/>
+                    </svg>
+                  .video_swiper-button-next.gallery__nav_btn.gallery__nav_btn_next
+                    <svg data-scroll-down width="70" height="70" viewBox="0 0 70 70" fill="#4a3a5e" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="35" cy="35" r="34" stroke="#4a3a5e"/>
+                      <path d="M29 34.0002L35 40.0002L41 34.0002" stroke="#ffff" stroke-width="2"/>
+                    </svg>
+    section.about
+      .about__wrapper 
+        .about__block.about__complex.block-anim
+          img(src="../../assets/images/home/about/background_1.png" alt="background")
+          .about__block_number 1
+          img.about__block_lavanda(src="../../assets/images/home/about/Lavander_icon.svg" alt="lavanda" id="lavanda-icon")
+          .about__block_content
+            .about__block_title.headers.chars-anim КОМПЛЕКС
+            .about__block_text.section-text.text-anim Ми поєднали спокій тихого спального району, розташованого поблизу озера, із сучасним, розвиненим комплексом для життя та відпочинку. У нас є все: затишні квартири, продумані планування, гаражні бокси, підземний багаторівневий паркінг із зоною укриття, власний торговельний центр та цілий ряд фасадних комерційних приміщень.
+            .about__block_button.button-anim
+              button(class="js-btn-call js-mobile-popup-call") ЗАМОВИТИ ДЗВІНОК
+        .about__block.about__location.block-anim
+          img(src="../../assets/images/home/about/background_2.png" alt="background")
+          .about__block_number 2
+          img.about__block_lavanda(src="../../assets/images/home/about/Lavander_icon.svg" alt="lavanda" id="lavanda-icon")
+          .about__block_content
+            .about__block_title.headers.chars-anim РОЗТАШУВАННЯ
+            .about__block_text.section-text.text-anim Комплекс зручно розташувався у спальному районі міста з гарно розвиненою транспортною мережею, що дозволить вам швидко та без зайвих клопотів дістатися до будь-якого кінця міста.
+            .about__block_button.button-anim
+              button(class="js-btn-call js-mobile-popup-call") ЗАМОВИТИ ДЗВІНОК
+        .about__block.about__infrastructure.block-anim
+          img(src="../../assets/images/home/about/background_3.png" alt="background")
+          .about__block_number 3
+          img.about__block_lavanda(src="../../assets/images/home/about/Lavander_icon.svg" alt="lavanda" id="lavanda-icon")
+          .about__block_content
+            .about__block_title.headers.chars-anim ІНФРАСТРУКТУРА
+            .about__block_text.section-text.text-anim У «Lavanda Park» уся територія продумана до найменших дрібниць, щоб створити незабутню атмосферу комфорту, куди хочеться повертатись знову і знову. На території: медичний заклад, освітній заклад, власний торговельний центр, аптеки, пошта, банки, кав’ярні, кафе, салон краси.
+            .about__block_button.button-anim
+              button(class="js-btn-call js-mobile-popup-call") ЗАМОВИТИ ДЗВІНОК
+        .about__block.about__territory.block-anim
+          img(src="../../assets/images/home/about/background_4.png" alt="background")
+          .about__block_number 4
+          img.about__block_lavanda(src="../../assets/images/home/about/Lavander_icon.svg" alt="lavanda" id="lavanda-icon")
+          .about__block_content
+            .about__block_title.headers.chars-anim ТЕРИТОРІЯ
+            .about__block_text.section-text.text-anim Простора територія комплексу площею 3,2 га вкрита зеленими оазами — доглянутими газонами, деревами та ароматними кущами лаванди, що створюють атмосферу гармонії й затишку. Алеї для прогулянок, зони відпочинку та інтерактивні дитячі й спортивні майданчики стануть улюбленим місцем зустрічей для багатьох мешканців мікрорайону Тяжилів.
+            .about__block_button.button-anim
+              button(class="js-btn-call js-mobile-popup-call") ЗАМОВИТИ ДЗВІНОК
+        .about__block.about__parking.block-anim
+          img(src="../../assets/images/home/about/background_5.png" alt="background")
+          .about__block_number 5
+          img.about__block_lavanda(src="../../assets/images/home/about/Lavander_icon.svg" alt="lavanda" id="lavanda-icon")
+          .about__block_content
+            .about__block_title.headers.chars-anim ПАРКІНГ-УКРИТТЯ
+            .about__block_text.section-text.text-anim Проєктом передбачено будівництво багаторівневого паркінгу із зоною укриття та гаражних боксів із достатньою кількістю паркувальних місць для всіх резидентів нашого комплексу.
+            .about__block_button.button-anim
+              button(class="js-btn-call js-mobile-popup-call") ЗАМОВИТИ ДЗВІНОК
+        .about__block.about__atmosphere.block-anim
+          img(src="../../assets/images/home/about/background_6.png" alt="background")
+          .about__block_number 6
+          img.about__block_lavanda(src="../../assets/images/home/about/Lavander_icon.svg" alt="lavanda" id="lavanda-icon")
+          .about__block_content
+            .about__block_title.headers.chars-anim АТМОСФЕРА
+            .about__block_text.section-text.text-anim Не потрібно шукати Прованс за тисячі кілометрів — він поруч. Лавандові кущі розквітають просто на території нашого комплексу, даруючи аромат, спокій і ідеальні локації для фотосесій. Як казав Жан Жіоно: «Лавандові поля — душа Провансу». І тепер ця душа живе тут.
+            .about__block_button.button-anim
+              button(class="js-btn-call js-mobile-popup-call") ЗАМОВИТИ ДЗВІНОК
+        .about__block.about__relax.block-anim
+          img(src="../../assets/images/home/about/background_7.png" alt="background")
+          .about__block_number 7
+          img.about__block_lavanda(src="../../assets/images/home/about/Lavander_icon.svg" alt="lavanda" id="lavanda-icon")
+          .about__block_content
+            .about__block_title.headers.chars-anim ЗОНИ ВІДПОЧИНКУ
+            .about__block_text.section-text.text-anim Житловий комплекс розташований в оточенні парку «Інтеграл» з великим стадіоном та озером із сучасною, затишною набережною. Тут ви зможете насолоджуватись сімейними та велопрогулянками, ранковими пробіжками, дихати свіжим повітрям. 
+            .about__block_button.button-anim
+              button(class="js-btn-call js-mobile-popup-call") ЗАМОВИТИ ДЗВІНОК
+    section.planning 
+      .planning__wrapper.block-anim
+        .planning__top 
+          .planning__title.headers.chars-anim Планування
+          .planning__buttons
+            button.planning__btn.button-anim.active(id="1-rooms") 1-кімнатні
+            button.planning__btn.button-anim(id="2-rooms") 2-кімнатні
+            button.planning__btn.button-anim(id="commercial") Комерційні приміщення
+        .planning__display.one-rooms.active(data-for="1-rooms")
+          .planning__center 
+            .planning__center_left 
+              .planning__center_left_left
+                .planning__center_left_left_top
+                  .planning__subtitle.chars-anim Функціональні однокімнатні <br>квартири
+                  .planning__text.active.text-anim(data-for="one_a") 1А Простора квартира із функціональним плануванням: кухня-вітальня із виходом на лоджію, спальня, суміщена вбиральня. Продумані місця для зберігання речей організовують простір. Великі вікна додають квартирі світла та затишку.
+                  .planning__text.text-anim(data-for="one_b") 1Б Планування квартири  включає: кухню-вітальню із виходом на лоджію, простору спальню, коридор із місцем для вбудованої шафи, суміщену вбиральню. У цій квартирі весь простір функціональний та продуманий для комфортного життя.
+                  .planning__text.text-anim(data-for="one_d") 1Д Сучасне планування корисно організовує кожен м2 цієї квартири. Функціональна кухня-вітальня із виходом на лоджію, простора спальня, коридор із місцем для вбудованої шафи, суміщена вбиральня. Великі вікна додають світла та комфорту оселі.
+                .planning__benefits 
+                  div
+                    img(src="../../assets/images/home/planning/benefit_1.svg" alt="benefit") 
+                    span.planning__text_benefits.text-anim Індивідуальне опалення
+                  div
+                    img(src="../../assets/images/home/planning/benefit_2.svg" alt="benefit") 
+                    span.planning__text_benefits.text-anim Сучасні планування
+              .planning__center_left_right
+                img(src="../../assets/images/home/planning/Info.png" alt="flat")
+                .planning__subtitle.chars-anim загальна площа від 39,1 до 47,2 м2
+            .planning__center_right
+              
+              .planning__slides 
+                .swiper.planning__swiper
+                  .swiper-wrapper
+                    .swiper-slide(id="one_a")
+                      .planning__subtitle.chars-anim Загальна площа: 45,7 м²
+                      .planning__img: img(src="../../assets/images/home/planning/1a.png" alt="house")
+                    .swiper-slide(id="one_b")
+                      .planning__subtitle.chars-anim Загальна площа: 39,1 м²
+                      .planning__img: img(src="../../assets/images/home/planning/1b.png" alt="house")
+                    .swiper-slide(id="one_d")
+                      .planning__subtitle.chars-anim Загальна площа: 41,5 м² 
+                      .planning__img: img(src="../../assets/images/home/planning/1d.png" alt="house")
+                .bottom_navigation
+                  .planning__swiper-button-prev.planning__nav_btn
+                    <svg data-scroll-down width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="35" cy="35" r="34" stroke="#dfdce4"/>
+                      <path d="M29 34.0002L35 40.0002L41 34.0002" stroke="#4a3a5e" stroke-width="2"/>
+                    </svg>
+                  .planning__swiper-pagination
+                  .planning__swiper-button-next.planning__nav_btn
+                    <svg data-scroll-down width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="35" cy="35" r="34" stroke="#dfdce4"/>
+                      <path d="M29 34.0002L35 40.0002L41 34.0002" stroke="#4a3a5e" stroke-width="2"/>
+                    </svg>
+              .planning__center_right_bottom 
+                button.button-anim.js-btn-call.js-mobile-popup-call Цікавить це планування?
+                a(href="https://lavanda-park.vn.ua/#thefloors/363/facilities/facilities-flat/320/plans"): button.button-anim ПОКАЗАТИ більше планувань
+        .planning__display.two-rooms(data-for="2-rooms")
+          .planning__center 
+            .planning__center_left 
+              .planning__center_left_left
+                .planning__center_left_left_top
+                  .planning__subtitle Функціональні двокімнатні квартири
+                  .planning__text.active.text-anim(data-for="two_a") 2А Компактна двокімнатна квартира із функціональним плануванням: дві окремі кімнати, кухня із виходом на балкон, суміщена вбиральня. У коридорі передбачено місце для вбудованої шафи. Великі вікна наповнюють простір квартири світлом та затишком.
+                  .planning__text.text-anim(data-for="two_g") 2Г Двокімнатна квартира для комфортного життя усієї сім’ї. У плануванні дві окремі кімнати, простора кухня із виходом на лоджію. У коридорі продумано місце для зберігання речей. Дві роздільні вбиральні додають зручності кожному мешканцю квартири.
+                .planning__benefits 
+                  div
+                    img(src="../../assets/images/home/planning/benefit_1.svg" alt="benefit") 
+                    span.planning__text_benefits.text-anim Індивідуальне опалення
+                  div
+                    img(src="../../assets/images/home/planning/benefit_2.svg" alt="benefit") 
+                    span.planning__text_benefits.text-anim Сучасні планування
+              .planning__center_left_right
+                img(src="../../assets/images/home/planning/Info_2.png" alt="flat")
+                .planning__subtitle загальна площа від 49,3 до 67,2 м²
+            .planning__center_right
+              .planning__slides 
+                .swiper.planning__swiper
+                  .swiper-wrapper
+                    .swiper-slide(id="two_a")
+                      .planning__subtitle.chars-anim Загальна площа: 49,3 м²
+                      .planning__img: img(src="../../assets/images/home/planning/2a.png" alt="house")
+                    .swiper-slide(id="two_g")
+                      .planning__subtitle.chars-anim Загальна площа: 59,0 м²
+                      .planning__img: img(src="../../assets/images/home/planning/2g.png" alt="house")
+                .bottom_navigation
+                  .planning__swiper-button-prev.planning__nav_btn
+                    <svg data-scroll-down width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="35" cy="35" r="34" stroke="#dfdce4"/>
+                      <path d="M29 34.0002L35 40.0002L41 34.0002" stroke="#4a3a5e" stroke-width="2"/>
+                    </svg>
+                  .planning__swiper-pagination
+                  .planning__swiper-button-next.planning__nav_btn
+                    <svg data-scroll-down width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="35" cy="35" r="34" stroke="#dfdce4"/>
+                      <path d="M29 34.0002L35 40.0002L41 34.0002" stroke="#4a3a5e" stroke-width="2"/>
+                    </svg>
+              .planning__center_right_bottom 
+                button.button-anim.js-btn-call.js-mobile-popup-call Цікавить це планування?
+                a(href="https://lavanda-park.vn.ua/#thefloors/363/facilities/facilities-flat/320/plans"): button ПОКАЗАТИ більше планувань
+        .planning__display.commercial(data-for="commercial")
+          .planning__center 
+            .planning__center_left 
+              .planning__center_left_left
+                .planning__center_left_left_top
+                  .planning__subtitle Функціональні однокімнатні квартири
+                  .planning__text.active.text-anim(data-for="com_1") Комерційне приміщення вільного планування загальною площею 116,5 м2. Велике панорамне засклення головного фасаду наповнює простір світлом та затишком. Безбар’єрний вхід у приміщення створює додатковий комфорт для усіх клієнтів Вашого бізнесу.
+                  .planning__text.text-anim(data-for="com_2") Комерційне приміщення простір якого можна перепланувати відповідно до потреб Вашого бізнесу. Загальна площа 84,4 м2. Великі панорамні вікна створюють атмосферу затишку, а  безбар’єрний вхід робить приміщення доступним для кожного.
+                .planning__benefits 
+                  div
+                    img(src="../../assets/images/home/planning/benefit_1.svg" alt="benefit") 
+                    span.planning__text_benefits Індивідуальне опалення
+                  div
+                    img(src="../../assets/images/home/planning/benefit_2.svg" alt="benefit") 
+                    span.planning__text_benefits Сучасні планування
+              .planning__center_left_right
+                img(src="../../assets/images/home/planning/Info_3.png" alt="flat")
+                .planning__subtitle Комерційні приміщення
+            .planning__center_right
+              .planning__slides 
+                .swiper.planning__swiper
+                  .swiper-wrapper
+                    .swiper-slide(id="com_1")
+                      .planning__subtitle.chars-anim Загальна площа: 116,5 м²
+                      .planning__img: img(src="../../assets/images/home/planning/com_1.png" alt="house")
+                    .swiper-slide(id="com_2")
+                      .planning__subtitle.chars-anim Загальна площа: 84,4 м²
+                      .planning__img: img(src="../../assets/images/home/planning/com_2.png" alt="house")
+                .bottom_navigation
+                  .planning__swiper-button-prev.planning__nav_btn
+                    <svg data-scroll-down width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="35" cy="35" r="34" stroke="#dfdce4"/>
+                      <path d="M29 34.0002L35 40.0002L41 34.0002" stroke="#4a3a5e" stroke-width="2"/>
+                    </svg>
+                  .planning__swiper-pagination
+                  .planning__swiper-button-next.planning__nav_btn
+                    <svg data-scroll-down width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="35" cy="35" r="34" stroke="#dfdce4"/>
+                      <path d="M29 34.0002L35 40.0002L41 34.0002" stroke="#4a3a5e" stroke-width="2"/>
+                    </svg>
+              .planning__center_right_bottom 
+                button.button-anim.js-btn-call.js-mobile-popup-call Цікавить це планування?
+                a(href="https://lavanda-park.vn.ua/#thefloors/363/facilities/facilities-flat/320/plans"): button ПОКАЗАТИ більше планувань
+    section.call-back-section
+      .call-back-section__wrapper.block-anim
+        .call-back-section__left.headers.chars-anim Бажаєте <br>дізнатись ціну?
+        .call-back-section__right 
+          form.call-block__form(id="call-back-form")
+                .form-field.disabled.form-field-input(data-field-input data-field-phone data-status="field--inactive")
+                    input.call-block__input.button-anim(type="tel" name="phone" placeholder="Телефон")
+                    .input-message(data-input-message)
+                button.call-block__submit.js-call-submit.button-anim(type="submit" data-btn-submit) 
+                    span(data-btn-submit-text) Зателефонуйте мені
+    section.iframe 
+      .iframe__wrapper.block-anim
+          button.button-anim(id="loadIframeButton") Завантажити тур
+          .iframe__container(id="iframeWrapper")
+            img(src="../../assets/images/home/iframe/iframe.png")
+            iframe(id="lazyIframe" loading="lazy" allowfullscreen)
+    section.construction_news.block-anim
+      .ticker-wrapper
+        .ticker
+          span |
+          p.text-ticker Хід будівництва
+          span |
+          p.text-ticker Хід будівництва
+          span |
+          p.text-ticker Хід будівництва
+          span |
+          p.text-ticker Хід будівництва
+      .construction_news__top
+        button.construction_news__btn.active.button-anim(id="construction-block") Хід будівництва
+        button.construction_news__btn.button-anim(id="news-block") Новини
+      .construction_news__wrapper.active.construction__wrapper.block-anim(data-for="construction-block")
+        .construction_news__title.headers.chars-anim Хід будівництва
+        .construction__slider.swiper
+          .swiper-wrapper
+            .swiper-slide
+              +progress-card('./assets/images/progress/1.jpg', 'листопад 2021', 10, 1)
+            .swiper-slide
+              +progress-card('./assets/images/progress/2.jpg', 
+            'жовтень 2021', 14)
+            .swiper-slide
+              +progress-card('./assets/images/progress/3.jpg', 'вересень 2021', 9)
+            .swiper-slide
+              +progress-card('./assets/images/progress/4.jpg', 'серпень 2021', 10)
+            .swiper-slide
+              +progress-card('./assets/images/progress/5.jpg', 'липень 2021', 10, 1)
+            .swiper-slide
+              +progress-card('./assets/images/progress/6.jpg', 'червень 2021', 9, 3)
+        .construction_news__slider_nav 
+          .construction_news__swiper-button-prev.construction__swiper-button-prev
+            <svg data-scroll-down width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="35" cy="35" r="34" stroke="#dfdce4"/>
+              <path d="M29 34.0002L35 40.0002L41 34.0002" stroke="#4a3a5e" stroke-width="2"/>
+            </svg>
+          .construction_news__swiper-button-next.construction__swiper-button-next
+            <svg data-scroll-down width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="35" cy="35" r="34" stroke="#dfdce4"/>
+              <path d="M29 34.0002L35 40.0002L41 34.0002" stroke="#4a3a5e" stroke-width="2"/>
+            </svg>
+        .construction_news__button
+          a.button-anim(href="https://lavanda-park.vn.ua/progress/") ДИВИТИСЯ БІЛЬШЕ ЗВІТІВ
+      .construction_news__wrapper.news__wrapper.block-anim(data-for="news-block")
+        .construction_news__title.headers.chars-anim Новини
+        .news__slider.swiper
+          .swiper-wrapper
             .swiper-slide.stocks-section-slider__item
-              +card('./assets/images/home/stocks/card-img.jpg', '23/09/2021', 'Встигніть здійснити бажання про власне житло! Продаж квартир у жк lavanda park відкрито!')
+              +card('./assets/images/home/stocks/card-img.png', '23/09/2021', 'Встигніть здійснити бажання про власне житло! Продаж квартир у жк lavanda park відкрито!')
             .swiper-slide.stocks-section-slider__item
-              +card('./assets/images/home/stocks/card-img.jpg', '23/09/2021', 'Встигніть здійснити бажання про власне житло! Продаж квартир у жк lavanda park відкрито!')
+              +card('./assets/images/home/stocks/card-img.png', '23/09/2021', 'Встигніть здійснити бажання про власне житло! Продаж квартир у жк lavanda park відкрито!')
             .swiper-slide.stocks-section-slider__item
-              +card('./assets/images/home/stocks/card-img.jpg', '23/09/2021', 'Встигніть здійснити бажання про власне житло! Продаж квартир у жк lavanda park відкрито!')
+              +card('./assets/images/home/stocks/card-img.png', '23/09/2021', 'Встигніть здійснити бажання про власне житло! Продаж квартир у жк lavanda park відкрито!')
             .swiper-slide.stocks-section-slider__item
-              +card('./assets/images/home/stocks/card-img.jpg', '23/09/2021', 'Встигніть здійснити бажання про власне житло! Продаж квартир у жк lavanda park відкрито!')
-      //- p.stocks-section__text акції#[span.stocks-section__ampersand &]новини
+              +card('./assets/images/home/stocks/card-img.png', '23/09/2021', 'Встигніть здійснити бажання про власне житло! Продаж квартир у жк lavanda park відкрито!')
+        .construction_news__slider_nav
+          .construction_news__swiper-button-prev.news__swiper-button-prev
+            <svg data-scroll-down width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="35" cy="35" r="34" stroke="#dfdce4"/>
+              <path d="M29 34.0002L35 40.0002L41 34.0002" stroke="#4a3a5e" stroke-width="2"/>
+            </svg>
+          .construction_news__swiper-button-next.news__swiper-button-next
+            <svg data-scroll-down width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="35" cy="35" r="34" stroke="#dfdce4"/>
+              <path d="M29 34.0002L35 40.0002L41 34.0002" stroke="#4a3a5e" stroke-width="2"/>
+            </svg>
+        .construction_news__button
+          a.button-anim(href="https://lavanda-park.vn.ua/news/") ДИВИТИСЯ БІЛЬШЕ Новин
+   
+
+    include ../includes/progress-pop-up.pug
 block footer
   include ../includes/footer.pug
 

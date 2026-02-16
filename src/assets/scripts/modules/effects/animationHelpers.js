@@ -1,4 +1,4 @@
-import gsap from "gsap";
+import gsap from 'gsap';
 
 export function splitToLines(selector) {
   const elementRef = typeof selector === 'string' ? document.querySelector(selector) : selector;
@@ -17,14 +17,14 @@ export function splitToLines(selector) {
 }
 
 export function fadeUpLines(element, settings = {}) {
-    gsap
-      .timeline()
-      .fromTo(
-        element.querySelectorAll('span>span'),
-        { yPercent: 100 },
-        { yPercent: 0, stagger: 0.05, duration: 1, ease: 'power2.out', ...settings },
-      )
-      .add(() => {
-        // elementRef.innerHTML = elementRef.textContent;
-      });
+  gsap
+    .timeline()
+    .fromTo(
+      element.querySelectorAll('span>span'),
+      { yPercent: 100 },
+      { yPercent: 0, stagger: 0.05, duration: 1, ease: 'power2.out', ...settings },
+    )
+    .add(() => {
+      // elementRef.innerHTML = elementRef.textContent;
+    });
 }

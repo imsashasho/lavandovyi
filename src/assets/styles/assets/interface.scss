@@ -4,7 +4,7 @@
   --btn-link-font-size: 14px;
   --headers-margin-bottom: 30px;
   --menu-call-block-max-width: 857px;
-  
+
   @include mobile {
     --headers-margin-bottom: 20px;
   }
@@ -23,10 +23,10 @@
 .main {
   --top-padding: 50px;
   padding: calc(var(--header-height) + var(--top-padding)) 0 var(--btm-padding);
-
+  padding-bottom: 0;
   &-home {
     --top-padding: 0px;
-    @include to(575px){
+    @include to(575px) {
       padding-bottom: 0;
     }
   }
@@ -34,9 +34,9 @@
 
 .headers {
   @include setFontStyle('Cormorant Garamond', 62px, 300, $headers-color, 100%, 0.01em);
-  
+
   @include tabletLarge {
-    font-size: 50px;        
+    font-size: 50px;
   }
   @include mobile {
     font-size: 30px;
@@ -54,7 +54,6 @@
   @include mobile {
     font-size: 12px;
   }
-  
 }
 
 .card {
@@ -79,15 +78,15 @@
       overflow: hidden;
     }
   }
-  @include from(1025px){
+  @include from(1025px) {
     img {
-      transition: .25s ease-out;
+      transition: 0.25s ease-out;
     }
     &:hover img {
       transform: scale(1.05);
     }
   }
-  
+
   &-bottom {
     --paddings-lrb: 50px; // lrb- left-right-bottom
     padding: 40px var(--paddings-lrb) var(--paddings-lrb);
@@ -96,12 +95,11 @@
     border-top: 0;
     flex-grow: 1;
     @include tablet {
-      padding: 30px 35px;    
+      padding: 30px 35px;
     }
     @include mobile {
       padding: 25px 30px;
     }
-
   }
 
   &-date {
@@ -132,16 +130,16 @@
     // overflow: hidden;
     // text-overflow: ellipsis;
     display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;  
-      overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
 
 .progress-card {
   @include baseFlexStyle(stretch, $flex-direction: column);
   cursor: pointer;
-  
+
   @include tablet {
     margin-bottom: 40px;
   }
@@ -149,7 +147,6 @@
     @include tablet {
       margin-bottom: 0;
     }
-    
   }
   &:hover {
     .progress-card__img {
@@ -227,7 +224,7 @@
 .menu {
   position: fixed;
   @include width-heigth(100%);
-  @include to(575px){
+  @include to(575px) {
     min-height: -webkit-fill-available;
   }
   background-color: rgba(0, 0, 0, 0.8);
@@ -270,7 +267,7 @@
       min-height: auto;
       flex: auto;
       height: 100%;
-      @include to(575px){
+      @include to(575px) {
         min-height: -webkit-fill-available;
       }
       justify-content: space-between;
@@ -291,10 +288,9 @@
         @include mobile {
           font-size: 14px;
         }
-        @include from(1025px){
-          transition: .3s ease-out;
+        @include from(1025px) {
+          transition: 0.3s ease-out;
           &:hover {
-            
             color: $dark-violet;
           }
         }
@@ -305,7 +301,6 @@
           }
         }
       }
-      
     }
     &__call-btn {
       font-size: 14px;
@@ -350,26 +345,25 @@
         background-size: 45px 45px;
       }
       .hover,
-        .default {
-          transition: .25s ease-out;
-          transform-origin: center;
-          transform-box: fill-box;
-        }
-        .default {
+      .default {
+        transition: 0.25s ease-out;
+        transform-origin: center;
+        transform-box: fill-box;
+      }
+      .default {
+        transform: scale(1);
+      }
+      .hover {
+        transform: scale(0);
+        fill: $lavander;
+      }
+      @include from(1025px) {
+        &:hover .hover {
           transform: scale(1);
-
         }
-        .hover {
+        &:hover .default {
           transform: scale(0);
-          fill: $lavander;
         }
-        @include from(1025px){
-          &:hover .hover {
-            transform: scale(1);
-          }
-          &:hover .default {
-            transform: scale(0);
-          }
       }
     }
 
@@ -378,13 +372,12 @@
     }
 
     &__element {
-      
       &:not(:last-child) {
         margin-bottom: 30px;
         @include mobile {
           margin-bottom: 20px;
         }
-      }  
+      }
     }
 
     &__link {
@@ -401,42 +394,42 @@
       // line-height: 100%;
       overflow: hidden;
       display: block;
-      
-      @include from(1025px){
-          color: transparent;
-          &:after {
-              content: attr(data-text);
-              position: absolute;
-              left: 0;
-              top: 0;
-              width: 100%;
-              height: 100%;
-              // color: green;
-              transition: .25s ease-out;
-              transform: translateY(-100%);
-              color: $dark-violet;
-              line-height: 110%;
-              opacity: 0;
-          }
-          &:before {
-              content: attr(data-text);
-              position: absolute;
-              // color: var(--color-white);
-              left: 0;
-              top: 0;
-              width: 100%;
-              height: 100%;
-              line-height: 110%;
-              color: $headers-color;
-              transition: .25s ease-out;
-          }
-          &:hover:before {
-              transform: translateY(110%);
-          }
-          &:hover:after {
-              opacity: 1;
-              transform: translateY(0);
-          }
+
+      @include from(1025px) {
+        color: transparent;
+        &:after {
+          content: attr(data-text);
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          // color: green;
+          transition: 0.25s ease-out;
+          transform: translateY(-100%);
+          color: $dark-violet;
+          line-height: 110%;
+          opacity: 0;
+        }
+        &:before {
+          content: attr(data-text);
+          position: absolute;
+          // color: var(--color-white);
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          line-height: 110%;
+          color: $headers-color;
+          transition: 0.25s ease-out;
+        }
+        &:hover:before {
+          transform: translateY(110%);
+        }
+        &:hover:after {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     }
     .lang-block {
@@ -445,7 +438,6 @@
         gap: 5px;
         a {
           color: $dark-grey;
-          
         }
         li.active a {
           font-weight: bold;
@@ -557,13 +549,12 @@
         height: 70px;
         .hover,
         .default {
-          transition: .25s ease-out;
+          transition: 0.25s ease-out;
           transform-origin: center;
           transform-box: fill-box;
         }
         .default {
           transform: scale(1);
-
         }
         .hover {
           transform: scale(0);
@@ -574,7 +565,7 @@
           width: 45px;
           background-size: 45px 45px;
         }
-        @include from(1025px){
+        @include from(1025px) {
           &:hover .hover {
             transform: scale(1);
           }
@@ -599,10 +590,10 @@
       max-width: 520px;
       @include baseFlexStyle($justify-content: center, $flex-direction: column);
       @include tablet {
-        height: 50vh;    
+        height: 50vh;
       }
       @include mobile {
-        height: 80vh;    
+        height: 80vh;
       }
     }
 
@@ -612,7 +603,7 @@
         width: 50%;
       }
       @include mobile {
-        margin-bottom: 30px;    
+        margin-bottom: 30px;
       }
     }
 
@@ -645,7 +636,7 @@
       @include mobile {
         margin-bottom: 30px;
         padding-bottom: 7px;
-        font-size: 12px;   
+        font-size: 12px;
       }
     }
 
@@ -672,7 +663,7 @@
         cursor: pointer;
         @include mobile {
           height: 20px;
-          width: 20px; 
+          width: 20px;
         }
         // &:checked + .call-block__checkbox-custom {
         //   // background: no-repeat center $dark-violet url('../images/call/ok.svg');
@@ -712,13 +703,12 @@
         height: 110px;
         .hover,
         .default {
-          transition: .25s ease-out;
+          transition: 0.25s ease-out;
           transform-origin: center;
           transform-box: fill-box;
         }
         .default {
           transform: scale(1);
-
         }
         .hover {
           transform: scale(0);
@@ -728,7 +718,7 @@
           height: 80px;
           width: 80px;
         }
-        @include from(1025px){
+        @include from(1025px) {
           &:hover .hover {
             transform: scale(1);
           }
@@ -742,7 +732,7 @@
       //   @include mobile {
       //     width: 80px;
       //     height: 80px;
-      //     background-size: 80px 80px;  
+      //     background-size: 80px 80px;
       //   }
       // }
       // @include slideBtns($background: );
@@ -784,7 +774,7 @@
       }
       @include mobile {
         margin-top: 0;
-        height: 55vh;    
+        height: 55vh;
       }
     }
 
@@ -837,8 +827,8 @@
     400,
     none
   );
-  @include from(1025px){
-    transition: .25s ease-out;
+  @include from(1025px) {
+    transition: 0.25s ease-out;
     &:hover {
       background-color: $light-lavander;
     }
@@ -935,7 +925,7 @@
       }
       .swiper-slide {
         opacity: 0.75;
-        transition: opacity .5s ease-out;
+        transition: opacity 0.5s ease-out;
         &:hover {
           opacity: 1;
         }
@@ -955,20 +945,19 @@
 
       // &::before {
       //   @include after-before-img('../images/footer/close-icon.svg', 70px, 70px);
-        
+
       // }
       svg {
         width: 70px;
         height: 70px;
         .hover,
         .default {
-          transition: .25s ease-out;
+          transition: 0.25s ease-out;
           transform-origin: center;
           transform-box: fill-box;
         }
         .default {
           transform: scale(1);
-
         }
         .hover {
           transform: scale(0);
@@ -979,7 +968,7 @@
           width: 45px;
           background-size: 45px 45px;
         }
-        @include from(1025px){
+        @include from(1025px) {
           &:hover .hover {
             transform: scale(1);
           }
@@ -997,6 +986,7 @@
   @include width-heigth(100%);
   background-color: $light-grey;
   top: 0;
+  left: 0;
   z-index: 30;
   // overflow-y: auto;
   // padding-bottom: var(--top-padding);
@@ -1013,13 +1003,17 @@
     var(--top-padding) repeat(4, auto) var(--top-padding),
     var(--lr-paddings) repeat(24, minmax(var(--popular-indent), 1fr)) var(--lr-paddings)
   );
-  
- 
+
   overflow-x: hidden;
   @include tabletLarge {
-    grid-template: var(--top-padding) repeat(4, auto) var(--top-padding)/var(--lr-paddings) repeat(21, minmax(var(--popular-indent), 1fr)) var(--lr-paddings);
+    grid-template:
+      var(--top-padding) repeat(4, auto) var(--top-padding) / var(--lr-paddings) repeat(
+        21,
+        minmax(var(--popular-indent), 1fr)
+      )
+      var(--lr-paddings);
   }
-  @include to(1360px){
+  @include to(1360px) {
     @include baseGridStyle(
       var(--top-padding) repeat(4, auto) var(--top-padding),
       var(--lr-paddings) repeat(21, 1fr) var(--lr-paddings)
@@ -1097,26 +1091,25 @@
         width: 45px;
       }
       .hover,
-        .default {
-          transition: .25s ease-out;
-          transform-origin: center;
-          transform-box: fill-box;
-        }
-        .default {
+      .default {
+        transition: 0.25s ease-out;
+        transform-origin: center;
+        transform-box: fill-box;
+      }
+      .default {
+        transform: scale(1);
+      }
+      .hover {
+        transform: scale(0);
+        fill: $lavander;
+      }
+      @include from(1025px) {
+        &:hover .hover {
           transform: scale(1);
-
         }
-        .hover {
+        &:hover .default {
           transform: scale(0);
-          fill: $lavander;
         }
-        @include from(1025px){
-          &:hover .hover {
-            transform: scale(1);
-          }
-          &:hover .default {
-            transform: scale(0);
-          }
       }
       svg {
       }
@@ -1239,7 +1232,7 @@
         }
         @include tablet {
           height: 412px;
-        }        
+        }
         @include mobile {
           height: 216px;
         }
@@ -1262,8 +1255,8 @@
           background-size: 45px 45px;
           border: 1px solid rgba(74, 58, 94, 0.15);
         }
-        @include from(1025px){
-          transition: .3s ease-out;
+        @include from(1025px) {
+          transition: 0.3s ease-out;
           &:hover {
             background-color: $light-lavander;
             border-color: $light-lavander;
@@ -1304,7 +1297,7 @@
       }
     }
 
-    &__slider-btn-img{
+    &__slider-btn-img {
       @include mobile {
         height: 10px;
         width: 5px;
@@ -1338,7 +1331,7 @@
     @include width-heigth(110px);
     @include multiple-transitions(0.5s, ease-out, transform, opacity);
     transform: scale(0);
-    
+
     &.active {
       transform: scale(1);
       opacity: 1;

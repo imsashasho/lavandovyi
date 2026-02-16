@@ -34,7 +34,6 @@
       // margin-bottom: var(--sec-btm-indent);
       padding-bottom: var(--sec-btm-indent);
       @include mobile {
-        
       }
     }
   }
@@ -71,7 +70,7 @@
 .philosophy {
   @include baseGridStyle(repeat(3, auto), repeat(auto-fill, minmax(60px, 1fr)));
   @include tabletLarge {
-    grid-template: repeat(3, auto)/repeat(auto-fill, minmax(40px, 1fr));
+    grid-template: repeat(3, auto) / repeat(auto-fill, minmax(40px, 1fr));
   }
   @include tablet {
     display: flex;
@@ -182,25 +181,23 @@
     repeat(2, auto) 80px calc(532px - 150px) 150px auto 200px,
     repeat(auto-fill, minmax(60px, 1fr))
   );
-  background: linear-gradient(0.5deg, #4A3A5E 47%, $light-grey 47%);
+  background: linear-gradient(0.5deg, #4a3a5e 47%, $light-grey 47%);
   @include tabletLarge {
     @include baseGridStyle(
       repeat(2, auto) 80px calc(532px - 150px) 120px auto 100px,
       repeat(auto-fill, minmax(40px, 1fr))
-  );
-
+    );
   }
   @include tablet {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(0deg, #4A3A5E 70%, transparent 50%);
+    background: linear-gradient(0deg, #4a3a5e 70%, transparent 50%);
     padding: 0 40px 80px 40px;
     margin-bottom: -2px;
-
   }
   @include mobile {
     padding: 0 15px 60px 15px;
-    background: linear-gradient(0.5deg, #4A3A5E 70%, transparent 50%);
+    background: linear-gradient(0.5deg, #4a3a5e 70%, transparent 50%);
   }
   // @include baseGridStyle(repeat(2, auto) 150px auto 150px, repeat(auto-fill, minmax(60px, 1fr)));
   // margin-bottom: var(--sec-btm-indent);
@@ -222,7 +219,7 @@
     }
     @include tablet {
       font-size: 15px;
-    } 
+    }
     @include mobile {
       font-size: 12px;
     }
@@ -345,7 +342,7 @@
     margin-bottom: 0;
   }
   @include mobile {
-    padding: 0 15px;   
+    padding: 0 15px;
   }
 
   &__header {
@@ -353,7 +350,7 @@
     margin-bottom: var(--elem-btm-margin);
     color: $light-grey;
     @include tablet {
-      text-align: left;  
+      text-align: left;
     }
   }
 
@@ -362,7 +359,7 @@
     justify-content: space-between;
     @include tablet {
       display: flex;
-      flex-direction: column;  
+      flex-direction: column;
     }
   }
 
@@ -389,7 +386,6 @@
       width: 100%;
       flex-direction: row;
     }
-
   }
 
   &__text {
@@ -420,7 +416,6 @@
     @include tablet {
       order: 2;
       width: 80%;
-      
     }
   }
 
@@ -437,17 +432,17 @@
     @include tablet {
       display: none;
     }
-    
+
     @include tablet {
       order: 3;
       flex-direction: column;
       width: 20%;
-      align-self: flex-start;  
+      align-self: flex-start;
     }
   }
   &__btn-wrapper-mobile {
-    display: none; 
-    
+    display: none;
+
     @include tabletLarge {
       display: none;
     }
@@ -456,14 +451,13 @@
       align-self: flex-start;
       margin-bottom: 50px;
     }
-    
+
     @include tablet {
       order: 3;
       flex-direction: column;
       width: 20%;
-      align-self: flex-start;  
+      align-self: flex-start;
     }
-
   }
 
   &__btn {
@@ -474,9 +468,9 @@
       width: 45px;
     }
     @media screen and (min-width: 1025px) {
-      transition: .25s ease-out;
+      transition: 0.25s ease-out;
       img {
-        transition: .25s ease-out;
+        transition: 0.25s ease-out;
       }
       &:hover {
         background-color: $white-color;
@@ -512,7 +506,7 @@
     margin-top: 40px;
     position: relative;
     background-color: rgba(255, 255, 255, 0.15);
-    
+
     @include tablet {
       display: none;
     }
@@ -543,7 +537,7 @@
   }
   @include mobile {
     padding-top: 60px;
-    padding-bottom: 60px;  
+    padding-bottom: 60px;
   }
 
   &__header {
@@ -585,7 +579,7 @@
       margin-bottom: 60px;
     }
     @include mobile {
-      margin-bottom: 40px;  
+      margin-bottom: 40px;
     }
     #map,
     .map,
@@ -648,9 +642,9 @@
           }
         }
       }
-      
+
       &--mobile {
-        @include from(576px){
+        @include from(576px) {
           display: none;
         }
         padding-left: 30px;
@@ -669,9 +663,8 @@
           color: $white-color;
         }
       }
-      
     }
-    &-list[data-opened="false"] .infra__map-icons-element--mobile {
+    &-list[data-opened='false'] .infra__map-icons-element--mobile {
       svg {
         transform: rotate(180deg);
       }
@@ -687,7 +680,6 @@
         transition: background-image 0.3s ease-in-out;
         display: none;
       }
-      
     }
   }
 
@@ -708,7 +700,7 @@
     }
     @include mobile {
       font-size: 12px;
-      margin-bottom: 20px;  
+      margin-bottom: 20px;
     }
   }
 
@@ -735,7 +727,7 @@
       font-size: 15px;
     }
     @include mobile {
-      font-size: 12px; 
+      font-size: 12px;
     }
 
     &:not(:last-child) {
@@ -780,7 +772,7 @@
     margin-bottom: 150px;
     @include tabletLarge {
       margin-bottom: 120px;
-    }   
+    }
     @include tablet {
       flex-direction: column;
       align-items: center;
@@ -788,7 +780,6 @@
     }
     @include mobile {
       margin-bottom: 40px;
-      
     }
   }
 
@@ -803,7 +794,7 @@
     @include mobile {
       &:not(:last-child) {
         margin-bottom: 40px;
-      }      
+      }
     }
   }
 
@@ -842,7 +833,7 @@
     }
 
     &-link {
-      transition: .25s ease-out;
+      transition: 0.25s ease-out;
       @include link-btns(270px, 70px, $dark-violet, 14px, $font-weight: 400);
       @include tablet {
         width: 220px;
@@ -858,18 +849,16 @@
         &:hover {
           background-color: $light-lavander;
         }
-        
       }
     }
   }
 }
 
 .about {
-  @include from(1025px){
+  @include from(1025px) {
     .swiper-wrapper {
       transition-timing-function: ease-out;
     }
-
   }
   &-slider {
     overflow: hidden;
@@ -906,7 +895,6 @@
       }
     }
   }
-  
 }
 @keyframes sliderText {
   0% {

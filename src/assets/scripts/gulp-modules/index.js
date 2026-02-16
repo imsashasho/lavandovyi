@@ -7,14 +7,18 @@ footerToTop.addEventListener('click', () => {
   });
 });
 
-
-
 // Вызов колл-пейджа
 const call = document.querySelector('.call');
 const btnsCall = document.querySelectorAll('.js-btn-call');
 const body = document.body;
 btnsCall.forEach(btn => {
-  if (document.documentElement.clientWidth < 576) return;
+  // if (
+  //   document.documentElement.clientWidth < 576 &&
+  //   !btn.classList.contains('first-column__btn-link')
+  // )
+  //   return;
+  if (document.documentElement.clientWidth < 576 && !btn.classList.contains('non-mob-version'))
+    return;
   btn.addEventListener('click', () => {
     call.classList.add('active');
     body.classList.add('disabled-scroll');
@@ -32,15 +36,14 @@ function mobilePopupHandler() {
   }
   function open() {
     mobPopup.classList.add('active');
-
   }
   document.querySelector('[data-mobile-callback-close]').addEventListener('click', () => {
     mobPopup.classList.remove('active');
-  })
-  mobPopup.addEventListener('click', ({target}) => {
+  });
+  mobPopup.addEventListener('click', ({ target }) => {
     target === mobPopup ? close() : null;
-  })
-  window.addEventListener('click',function(evt){
+  });
+  window.addEventListener('click', function(evt) {
     const target = evt.target.closest('.js-mobile-popup-call');
     if (target === null) return;
     open();
@@ -48,11 +51,10 @@ function mobilePopupHandler() {
   document.querySelector('[data-call-form-popup]').addEventListener('click', () => {
     call.classList.add('active');
     close();
-  })
+  });
 }
 
 mobilePopupHandler();
-
 
 // Отправить форму колл-пейджа
 // const submitCall = document.querySelector('.js-call-submit');
@@ -85,4 +87,4 @@ callThanksCloseBtn.addEventListener('click', () => {
     callThanksBlock.classList.remove('active');
   }, 500);
 });
-
+//----------//

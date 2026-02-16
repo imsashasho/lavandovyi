@@ -196,72 +196,70 @@
   transform: $transform;
 }
 
-
 @mixin linksHover() {
-    position: relative;
-    // line-height: 100%;
-    overflow: hidden;
-    display: block;
-    
-    @include from(1025px){
-        color: transparent;
-        &:after {
-            content: attr(data-text);
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            // color: green;
-            transition: .25s ease-out;
-            transform: translateY(-100%);
-            color: $dark-violet;
-            line-height: 110%;
-            opacity: 0;
-        }
-        &:before {
-            content: attr(data-text);
-            position: absolute;
-            // color: var(--color-white);
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            line-height: 110%;
-            color: $headers-color;
-            transition: .25s ease-out;
-        }
-        &:hover:before {
-            transform: translateY(110%);
-        }
-        &:hover:after {
-            opacity: 1;
-            transform: translateY(0);
-        }
+  position: relative;
+  // line-height: 100%;
+  overflow: hidden;
+  display: block;
+
+  @include from(1025px) {
+    color: transparent;
+    &:after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      // color: green;
+      transition: 0.25s ease-out;
+      transform: translateY(-100%);
+      color: $dark-violet;
+      line-height: 110%;
+      opacity: 0;
     }
+    &:before {
+      content: attr(data-text);
+      position: absolute;
+      // color: var(--color-white);
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      line-height: 110%;
+      color: $headers-color;
+      transition: 0.25s ease-out;
+    }
+    &:hover:before {
+      transform: translateY(110%);
+    }
+    &:hover:after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 @mixin hoverSvg {
   .hover,
-    .default {
-      transition: .25s ease-out;
-      transform-origin: center;
-      transform-box: fill-box;
-    }
-    .default {
+  .default {
+    transition: 0.25s ease-out;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  .default {
+    transform: scale(1);
+  }
+  .hover {
+    transform: scale(0);
+    fill: $lavander;
+  }
+  @include from(1025px) {
+    &:hover .hover {
       transform: scale(1);
-
     }
-    .hover {
+    &:hover .default {
       transform: scale(0);
-      fill: $lavander;
     }
-    @include from(1025px){
-      &:hover .hover {
-        transform: scale(1);
-      }
-      &:hover .default {
-        transform: scale(0);
-      }
   }
 }

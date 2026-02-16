@@ -15,19 +15,17 @@ export const intersectionObserver = (selector, onIntersect) => {
 
   let observer = new IntersectionObserver(handleIntersection, options);
   let target = document.querySelector(selector);
-  observer.observe(target);
+  // observer.observe(target);
 };
 
-
 export const throttle = (func, ms) => {
-
   let isThrottled = false,
     savedArgs,
     savedThis;
 
   function wrapper() {
-
-    if (isThrottled) { // (2)
+    if (isThrottled) {
+      // (2)
       savedArgs = arguments;
       savedThis = this;
       return;
@@ -47,4 +45,4 @@ export const throttle = (func, ms) => {
   }
 
   return wrapper;
-}
+};
